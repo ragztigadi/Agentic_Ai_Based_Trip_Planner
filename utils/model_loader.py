@@ -7,7 +7,14 @@ from utils.config_loader import load_config
 from langchain_gorq import ChatGorq
 from langchain_gemini import ChatGemini 
 
-
+class ConfigLoader:
+    def __init__(self):
+        print(f"Loaded config.....")
+        self.config = load_config()
+    
+    def __getitem__(self, key):
+        return self.config[key]
+    
 class ModelLoader(BaseModel):
     model_provider: Literal['gorq', 'gemini'] = 'gemini'
     config: Optional[ConfigLoader] = Field(default=None, exclude=True)
