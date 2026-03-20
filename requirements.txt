@@ -1,0 +1,14 @@
+langchain
+langchain-community
+langchain-experimental
+fastapi
+python-dotenv
+streamlit
+pydantic
+httpx
+requests
+langchain_google_community
+langchain_tavily
+langchain-google-community
+langchain_groq
+
