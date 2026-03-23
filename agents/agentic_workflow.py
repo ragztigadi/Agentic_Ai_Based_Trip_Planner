@@ -30,7 +30,7 @@ class GraphBuilder():
         
         self.system_prompt = SYSTEM_PROMPT
 
-    def agent_function(self):
+    def agent_function(self, state):
         """Main agent function"""
         user_question = state["messages"]
         input_question = [self.system_prompt] + user_question
