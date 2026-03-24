@@ -21,7 +21,7 @@ An end-to-end agentic AI application that generates personalized travel itinerar
 
 ## System Architecture
 
-Documents/1 SYSTEM ARCHI.png
+e:\Agentic_Ai_Based_Trip_Planner\Documents\1 SYSTEM ARCHI.png
 
 The architecture is divided into two primary layers.
 
