@@ -102,7 +102,8 @@ The `deploy.yml` file under `.github/workflows/` defines a two-job pipeline trig
 
 ## Application Interface
 
-e:\Agentic_Ai_Based_Trip_Planner\Documents\2 UIUX.png
+<img width="1920" height="952" alt="2 UIUX" src="https://github.com/user-attachments/assets/01bb18c3-cfa8-46bf-a38a-8e3e15c1c692" />
+UIUX.png
 
 The frontend is built with Streamlit and served on port 8501. Users enter a natural language travel query such as "Plan a 7-day trip to Kyoto in spring" into the destination input field. Quick-select destination chips are provided for common destinations including Kyoto, Santorini, Bali, Paris, and Patagonia. Submitting the query triggers the agentic workflow via the FastAPI backend.
 
@@ -112,17 +113,17 @@ The frontend is built with Streamlit and served on port 8501. Users enter a natu
 
 ### New York City Trip Plan
 
-e:\Agentic_Ai_Based_Trip_Planner\Documents\3 in-op ex -a.png
+<img width="1920" height="920" alt="3 in-op ex -a" src="https://github.com/user-attachments/assets/45469b5d-00a0-4d29-8945-ea51e0eadf6e" />
+png
 
 The agent generates a structured day-by-day itinerary. For a New York City trip, the output includes a morning-to-evening schedule with landmark recommendations, dining suggestions, accommodation options across different budget tiers, transportation guidance, and a detailed budget breakdown covering accommodation, food, transport, and attractions.
 
 ### London 2-Day Travel Plan
 
-e:\Agentic_Ai_Based_Trip_Planner\Documents\4 in-op ex 2a.png
+<img width="1920" height="978" alt="4 in-op ex 2a" src="https://github.com/user-attachments/assets/fd724c83-2e97-4bd5-8c13-efec7160ca8f" />
 
 
-
-e:\Agentic_Ai_Based_Trip_Planner\Documents\5 in-op ex 2b.png
+<img width="1920" height="910" alt="5 in-op ex 2b" src="https://github.com/user-attachments/assets/983e70f7-4ee0-4bf1-a7b1-12c7b9a411de" />
 
 For a London trip, the agent produces a two-day plan with timed activity slots, restaurant recommendations, West End entertainment suggestions, transportation advice including the Oyster Card, accommodation recommendations, a full budget breakdown totalling approximately $820, current weather conditions, and practical travel tips.
 
@@ -132,13 +133,15 @@ For a London trip, the agent produces a two-day plan with timed activity slots, 
 
 ### EC2 Instance
 
-e:\Agentic_Ai_Based_Trip_Planner\Documents\6 EC2 initiated.png
+<img width="1920" height="909" alt="6 EC2 initiated" src="https://github.com/user-attachments/assets/753e038e-95d2-4d02-8db0-1610e1797e68" />
+initiated.png
 
 The application is deployed on an Amazon EC2 `t2.medium` instance named `ai-trip-planner` in the `us-east-1` region. The instance runs Ubuntu and hosts the self-hosted GitHub Actions runner as a systemd service, ensuring the deployment step executes directly on the target machine without requiring SSH from the pipeline.
 
 ### Amazon ECR Repository
 
-e:\Agentic_Ai_Based_Trip_Planner\Documents\7 ecr initiated.png
+<img width="1920" height="903" alt="7 ecr initiated" src="https://github.com/user-attachments/assets/927e209f-68e9-424f-b728-d0f5275f434b" />
+ated.png
 
 A private Amazon ECR repository named `ai-trip-planner` is provisioned under account `107564013511` in `us-east-1`. The repository stores both Docker images — `api-latest` and `streamlit-latest` — with mutable tags and AES-256 encryption. Images are pushed here during the CI phase and pulled during the CD phase.
 
@@ -146,7 +149,8 @@ A private Amazon ECR repository named `ai-trip-planner` is provisioned under acc
 
 ## CI/CD Pipeline Result
 
-e:\Agentic_Ai_Based_Trip_Planner\Documents\8 cicd done.png
+<img width="1881" height="879" alt="8 cicd done" src="https://github.com/user-attachments/assets/934116c1-1834-4e7d-8a3c-d37bd05e8165" />
+d done.png
 
 The GitHub Actions pipeline run #5 completed with a status of **Success** in 1 minute 52 seconds. The Continuous-Integration job finished in 1 minute 20 seconds and the Continuous-Deployment job completed in 28 seconds. Both jobs passed without errors, confirming that the Docker images were built, pushed to ECR, and deployed to the EC2 instance successfully.
 
