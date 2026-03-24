@@ -51,6 +51,10 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
+      - name: Copy .env file
+        run: |
+          cp /home/ubuntu/Agentic_Ai_Based_Trip_Planner/.env $GITHUB_WORKSPACE/.env
+
       - name: Pull and run Docker images from ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
